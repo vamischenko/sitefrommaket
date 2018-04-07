@@ -47,7 +47,9 @@ body {
 /*body>.container-fluid {
     padding: 0;
 }*/
-
+.container-fluid {
+    overflow: hidden;
+}
 /* Заголовок */
 
 header.header {
@@ -226,14 +228,49 @@ section.products h2 {
 }
 
 section.products .price {
+    right: 3%;
     white-space: nowrap;
     font-size: 1.4rem;
 }
 
 section.products .sale {
+    right: 10px;
     text-decoration: line-through;
     color: #e24602;
     font-size: 1.4rem;
+}
+
+.corner {
+    position: absolute;
+    width: 46px;
+    height: 46px;
+    top: 0;
+    right: 0;
+    font-size: 9px;
+}
+
+.corner.new {
+    background-image: url("../img/Corner.png");
+}
+
+.corner::after {
+    position: absolute;
+    right: 4px;
+    top: 9px
+}
+
+.corner.new::after {
+    content: 'NEW';
+    color: white;
+}
+
+.corner.hot {
+    background-image: url("../img/Corner_y.png");
+}
+
+.corner.hot::after {
+    content: 'HOT';
+    color: black;
 }
 
 /* Brand */
