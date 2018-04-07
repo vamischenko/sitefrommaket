@@ -1,20 +1,356 @@
-html, body {
-    height: 100%;
+@font-face {
+    font-family: "Raleway-Bold";
+    src: url("../fonts/Raleway-Bold.ttf");
 }
-.header {
-    height:120px;
-    background-color: rgb(0,255,102);
+
+@font-face {
+    font-family: "Raleway-ExtraBold";
+    src: url("../fonts/Raleway-ExtraBold.ttf");
 }
-.main {
-    min-height:100%;
+
+@font-face {
+    font-family: "Raleway-Regular";
+    src: url("../fonts/Raleway-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Raleway-Heavy";
+    src: url("../fonts/Raleway-Heavy.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("../fonts/Roboto-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Black";
+    src: url("../fonts/Roboto-Black.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-BlackItalic";
+    src: url("../fonts/Roboto-BlackItalic.ttf");
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+
+body {
+    background-color: #f8f8f8;
+    font-family: Roboto-Black, sans-serif;
+}
+
+/*body>.container-fluid {
+    padding: 0;
+}*/
+
+/* Заголовок */
+
+header.header {
+    background-color: #abeafa;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+header article.title-message {
+    /*height: 300px;*/
+    margin-bottom: 66px;
+    margin-top: 200px;
+    font-style: italic;
+    font-size: 1.8rem;
+    padding: 80px 20px 20px 20px;
+    text-align: left;
+    font-family: Raleway-Bold, sans-serif;
+    font-weight: bold;
+    background-color: #fff51f;
+    color: black;
+}
+
+header article.title-message h2 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+header .title-slide {
+    color: #fff51f;
+    font-family: Raleway-ExtraBold, sans-serif;
+    font-size: 1.8rem;
+}
+
+header .title-slide h2 {
+    font-size: 4.8rem;
+    font-weight: bold;
+    font-family: Raleway-ExtraBold, sans-serif;
+}
+
+header .title-slide p {
+    font-family: Raleway-Regular, sans-serif;
+}
+
+header .title-slide button {
+    color: black;
+    background-color: #fff51f;
+    font-weight: bold;
+    padding: 7px 12px;
+    border-radius: 0;
+}
+
+header .social {
+    margin-top: 40px;
+    color: white;
+}
+
+header .social i {
+    margin-left: 7px;
+}
+
+/* Боковое меню */
+div.left-content, div.header-welcome {
+    padding: 0;
+}
+
+sidebar {
     position: relative;
-    background-color: rgb(100,255,255);
+    top: -20px;
 }
-.footer {
-    height:150px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+
+sidebar.left-menu {
+    padding: 0;
+}
+
+sidebar.left-menu ul {
+    padding: 0;
+}
+
+sidebar.left-menu li {
+    background-color: #26d2fc;
+    /*line-height: 1.5;*/
+    cursor: pointer;
+    list-style: none;
+    padding-left: 20px;
+}
+
+sidebar.left-menu li a {
+    color: black;
+    text-transform: uppercase;
+    font-family: Roboto-Black, sans-serif;
+    font-size: 1.4rem;
+}
+
+sidebar.left-menu li a:hover {
+    text-decoration: none;
+}
+
+sidebar.left-menu .nav li:hover {
+    background-color: #333333;
+}
+
+sidebar.left-menu .nav li:hover a {
+    color: white;
+    background-color: #333333;
+}
+
+sidebar.left-menu h3 {
+    background-color: #333333;
+    line-height: 2;
+    color: white;
+    font-family: Roboto-Black, sans-serif;
+    font-size: 1.4rem;
+    margin: 0;
+    padding: 20px 35px;
+}
+
+/* Блок под sidebar */
+.open-message {
+    height: 300px;
+    background-color: #e0e0e0;
+    font-family: Raleway-Heavy, sans-serif;
+    font-size: 3.4rem;
+    line-height: 0.9;
+    font-weight: bold;
+
+}
+
+.open-message .inner-message {
+    position: relative;
+    width: 120px;
+    right: -125px;
+    top: 50%;
+}
+
+/* Продукты на главной */
+
+section.products {
+    position: relative;
+    top: -20px;
+    padding-left: 30px;
+}
+
+section.products .products-list, section.products h2 {
+    background-color: #f8f8f8;
+    overflow: hidden;
+}
+
+section.products figure {
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 1.4rem;
+    font-style: italic;
+}
+
+section.products figure img {
     width: 100%;
-    background-color: rgb(0,0,153);
+}
+
+section.products figure .product-list-inner {
+    padding: 15px;
+    background-color: white;
+    height: 320px;
+}
+
+section.products figure .product-title {
+    padding-top: 15px;
+    text-align: left;
+}
+
+section.products h2 {
+    color: #707070;
+    font-size: 2.2rem;
+    font-style: italic;
+    padding: 10px 0 10px 25px;
+}
+
+section.products .price {
+    white-space: nowrap;
+    font-size: 1.4rem;
+}
+
+section.products .sale {
+    text-decoration: line-through;
+    color: #e24602;
+    font-size: 1.4rem;
+}
+
+/* Brand */
+.brand-zone {
+    margin: 0 0 40px 0;
+}
+
+.brand-zone div {
+    text-align: center;
+    color: #bababa;
+    font-size: 2.5rem;
+}
+
+/* pre-footer */
+.pre-footer .instagram {
+    background-color: #eaeaea;
+    font-family: Roboto-BlackItalic, sans-serif;
+}
+
+.pre-footer .instagram img {
+    width: 100%;
+}
+
+.pre-footer .instagram figure.col-md-2 {
+    padding: 10px 5px 10px 5px;
+}
+
+.pre-footer .big-social div {
+    padding: 40px 0;
+    color: white;
+    margin: 60px 0 0 0;
+}
+
+.pre-footer .big-social div.facebook {
+    background-color: #3b5997;
+}
+
+.pre-footer .big-social div.twitter {
+    background-color: #3fccfd;
+}
+
+.pre-footer .big-social div.pinterest {
+    background-color: #cb2027;
+}
+
+/* Подвал */
+footer.footer {
+    background-color: #373737;
+    color: #fff;
+    font-size: 1.2rem;
+    font-family: Roboto-Regular, sans-serif;
+    padding: 60px 0;
+}
+
+footer.footer nav {
+    padding-left: 30px;
+
+}
+
+footer.footer h3 {
+    font-weight: bold;
+}
+
+footer.footer nav ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+footer.footer nav a {
+    color: white;
+}
+
+footer.footer form input {
+    background-color: #fff51f;
+    border-radius: 0;
+}
+
+footer.footer form button {
+    background-color: #000;
+    border-radius: 0;
+    color: white;
+}
+
+footer.footer .payment ul {
+    padding: 0;
+    text-align: center;
+    margin-top: 45px;
+}
+
+footer.footer .payment li {
+    display: inline-block;
+    padding: 0 3px;
+}
+
+footer.footer a.email {
+    color: #fff51f;
+}
+
+footer.footer dt {
+    width: 50px;
+    text-align: left;
+}
+
+footer.footer dd {
+    margin-left: 70px;
+}
+
+/* After-footer */
+.after-footer {
+    font-family: Roboto-Regular, sans-serif;
+    font-size: 1.2rem;
+    background-color: #333333;
+    color: white;
+    padding: 15px 0;
+}
+
+.after-footer .social i {
+    padding-right: 15px;
 }
